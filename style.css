@@ -1,0 +1,643 @@
+/* osnovno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #030816;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+
+
+
+/*============================================================================*/
+
+
+
+
+
+
+/* navigacija i header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(3, 8, 22, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background: url('image2.png') no-repeat center/cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.logo-naziv {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+nav ul li a {
+    color: #8892b0;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* zajedni stil za sve sekcije */
+section {
+    min-height: 100vh;
+    padding: 100px 5% 50px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+
+/*============================================================================*/
+
+
+
+
+
+/* pocetna */
+#pocetna {
+    background:
+        linear-gradient(to right,
+            rgba(3,8,22,1.0)   0%,
+            rgba(3,8,22,1.0)  28%,
+            rgba(3,8,22,0.92) 44%,
+            rgba(3,8,22,0.55) 58%,
+            rgba(3,8,22,0.10) 72%,
+            rgba(3,8,22,0.00) 100%
+        ),
+        linear-gradient(to bottom,
+            rgba(3,8,22,0.95) 0%,
+            rgba(3,8,22,0.0)  10%,
+            rgba(3,8,22,0.0)  90%,
+            rgba(3,8,22,0.95) 100%
+        ),
+        url('image1.jpeg') no-repeat right center / auto 100%;
+    justify-content: center;
+}
+
+.hero-tekst {
+    max-width: 650px;
+}
+
+.hero-tekst h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.hero-tekst p {
+    font-size: 1.5rem;
+    color: #a8b2d1;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+/*============================================================================*/
+
+
+
+
+
+/* posada */
+#posada {
+    padding-bottom: 180px;
+}
+
+.posada-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1400px; /* Povećana širina celog bloka */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.posada-kartica {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.posada-kartica::before {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: radial-gradient(ellipse at bottom, rgba(56, 189, 248, 0.15), transparent 70%);
+    pointer-events: none;
+}
+
+.posada-info h3 {
+    font-size: 1.3rem;
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+.posada-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.posada-info p {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+.posada-slika {
+    width: 220px;
+    height: 300px;
+    max-width: 220px;
+    border-radius: 15px;
+    object-fit: cover;
+    flex-shrink: 0;
+    will-change: transform;
+    image-rendering: auto;
+}
+
+
+
+
+
+/*============================================================================*/
+
+
+
+
+
+/* raketa */
+#raketa {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+#raketa::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to bottom, rgba(3,8,22,0.85) 0%, transparent 12%, transparent 88%, rgba(3,8,22,0.85) 100%),
+        linear-gradient(to right,
+            rgba(3,8,22,0.97) 0%,
+            rgba(3,8,22,0.75) 20%,
+            rgba(3,8,22,0.15) 50%,
+            rgba(3,8,22,0.75) 80%,
+            rgba(3,8,22,0.97) 100%
+        );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.raketa-bg-slika {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    max-width: none;
+    z-index: 0;
+}
+
+.raketa-container {
+    display: grid;
+    grid-template-columns: 38% 38%;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    padding: 120px 4% 80px 4%;
+    width: 100%;
+}
+
+.raketa-kolona {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.spec-kartica {
+    background: rgba(3, 8, 22, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 0.85rem 1.25rem;
+    isolation: isolate;
+}
+
+.spec-kartica h2 { margin-bottom: 0.4rem; font-size: 1.75rem; }
+.sivi-tekst { color: #94a3b8; margin-bottom: 7px; font-size: 1rem; }
+
+.spec-tabela { width: 100%; color: #94a3b8; font-size: 1rem;}
+.spec-tabela td { padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.spec-tabela tr:last-child td { border-bottom: none; }
+.spec-tabela td:nth-child(2) { text-align: right; color: #fff; font-weight: 600; }
+
+.deo-kartica {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background: rgba(3, 8, 22, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 0.65rem 1rem;
+    isolation: isolate;
+}
+
+.deo-tekst h3 { font-size: 1.3rem; }
+.deo-tekst p { color: #94a3b8; font-size: 0.9rem; margin-top: 0.25rem; }
+.deo-slika { width: 170px; height: 170px; max-width: 170px; border-radius: 10px; object-fit: cover; flex-shrink: 0; will-change: transform; image-rendering: auto; }
+
+
+
+
+
+
+/*============================================================================*/
+
+
+
+
+
+/* galerija */
+#galerija {
+    padding-top: 180px;
+}
+.galerija-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.galerija-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+.galerija-item::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+}
+
+
+.galerija-item.g-span-2-row {
+    grid-row: span 2;
+}
+
+.galerija-item.g-span-2-row::before {
+    padding-top: 177.78%;
+}
+
+
+.galerija-item.g-span-2-col {
+    grid-column: span 2;
+}
+
+.galerija-item.g-span-2-col::before {
+    padding-top: 28.125%;
+}
+
+.galerija-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.galerija-item video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.galerija-item img:hover {
+    transform: scale(1.02);
+    z-index: 2;
+    position: absolute;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.g-span-2-row { grid-row: span 2; }
+.g-span-2-col { grid-column: span 2; }
+
+
+.galerija-footer {
+    padding-top: 25px;
+    max-width: 1400px;
+    margin: 0 auto 0 auto; /* 1.5rem margine dole pravi razmak do slika */
+    width: 100%;
+    text-align: center;
+}
+
+.galerija-footer p {
+    color: #94a3b8;
+    font-size: 1.05rem;
+}
+
+.galerija-footer a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(255,255,255,0.3);
+    transition: text-decoration-color 0.3s ease;
+}
+
+.galerija-footer a:hover {
+    text-decoration-color: #ffffff;
+}
+
+
+
+
+
+/*============================================================================*/
+
+
+
+
+
+
+/* tajmlajn */
+.tajmlajn-wrapper {
+    position: relative;
+    max-width: 1600px;
+    width: 100%;
+    margin: 4rem auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.tajmlajn-linija {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    height: 4px;
+    background-color: #ffffff;
+    z-index: 1;
+    /* koristim mali js skript iz html */
+}
+
+.tajmlajn-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16%;
+    z-index: 2;
+}
+
+.tajmlajn-slika {
+    width: 100%;
+    aspect-ratio: 9/16;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    background: #1e293b;
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+.tajmlajn-tacka {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    box-shadow: 0 0 0 8px #030816;
+    flex-shrink: 0;
+}
+
+.tajmlajn-kartica {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    min-height: 180px;
+}
+
+.tajmlajn-kartica h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.tajmlajn-kartica p {
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+
+
+
+
+/*============================================================================*/
+
+
+
+
+
+
+/* footer */
+footer {
+    background: rgba(3, 8, 22, 0.98);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3rem 5%;
+}
+
+.footer-sadrzaj {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 3rem;
+}
+
+.footer-logo-blok {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-logo {
+    width: 36px;
+    height: 36px;
+    background: url('image2.png') no-repeat center/cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.footer-naziv {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.footer-opis {
+    color: #475569;
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-nav a {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #ffffff;
+}
+
+.footer-copy {
+    color: #334155;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* podesavanja slika za mobilne */
+@media (max-width: 1200px) {
+    .raketa-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 1024px) {
+    .posada-grid { grid-template-columns: 1fr; }
+    .tajmlajn-wrapper { flex-direction: column; align-items: center; gap: 2rem; }
+    .tajmlajn-linija { display: none; }
+    .tajmlajn-item { width: 90%; flex-direction: row; gap: 1.5rem; text-align: left; }
+    .tajmlajn-slika { width: 150px; height: 150px; margin-bottom: 0; }
+    .tajmlajn-tacka { display: none; }
+    .tajmlajn-kartica { min-height: auto; }
+    .galerija-grid { grid-template-columns: 1fr 1fr; }
+    .galerija-item.g-span-2-row::before { padding-top: 177.78%; }
+}
+
+@media (max-width: 768px) {
+    nav ul { display: none; }
+    .hero-tekst h1 { font-size: 3rem; }
+    .galerija-grid { grid-template-columns: 1fr; }
+    .galerija-item.g-span-2-row, .galerija-item.g-span-2-col { grid-row: span 1; grid-column: span 1; }
+    .galerija-item.g-span-2-row::before { padding-top: 56.25%; }
+    .galerija-item.g-span-2-col::before { padding-top: 56.25%; }
+    .posada-kartica { flex-direction: column; text-align: center; }
+}
